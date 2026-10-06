@@ -4,7 +4,7 @@ Website voor de Android-app UpdateMonitor (Nordic Appworks), gehost op GitHub Pa
 
 - `index.html` — homepagina (functies, screenshots, privacy, contactformulier via Formspree)
 - `privacy.html` — privacybeleid (de URL voor de Play Console: `https://updatemonitor.app/privacy.html`)
-- `404.html`, `robots.txt`, `sitemap.xml`, `CNAME`, `.nojekyll`
+- `404.html`, `robots.txt`, `sitemap.xml`, `.nojekyll`
 - `img/` — banner, screenshots, iconen; gemaakt vanuit de app-repo (`Android-Apps/UpdateMonitor`)
 
 ## Live zetten
@@ -17,7 +17,9 @@ Website voor de Android-app UpdateMonitor (Nordic Appworks), gehost op GitHub Pa
    ```
 
 2. **GitHub Pages aanzetten**: Settings → Pages → *Deploy from a branch* → `main` / `/ (root)`.
-3. **Eigen domein**: Settings → Pages → Custom domain → `updatemonitor.app` (staat ook in `CNAME`).
+3. **Eigen domein** (pas zodra `updatemonitor.app` geregistreerd is): Settings → Pages → Custom domain → `updatemonitor.app`. GitHub maakt dan zelf het bestand `CNAME` aan. Zet het domein er niet eerder in: dan stuurt GitHub alle bezoekers door naar een adres dat nog niet bestaat.
+
+   Tot die tijd staat de site op **https://vanderlindenno.github.io/UpdateMonitor/**.
 4. **DNS bij de registrar** (bijvoorbeeld Porkbun, zoals rebootmonitor.com):
 
    | Type | Host | Waarde |
