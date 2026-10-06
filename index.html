@@ -84,7 +84,7 @@
       <div class="feature">
         <svg class="icon"><use href="#i-bell"/></svg>
         <h3>Notifications</h3>
-        <p>One short summary when apps change, with new permissions shown first.</p>
+        <p>Optional and off by default: a short summary of all changes, Play Store updates and/or Android system updates.</p>
       </div>
       <div class="feature">
         <svg class="icon"><use href="#i-calendar"/></svg>
@@ -155,7 +155,7 @@
       <h2>Permissions</h2>
       <ul class="perm-list">
         <li><code>QUERY_ALL_PACKAGES</code> – to see all installed apps, their versions and requested permissions. This is the core of the app; the welcome screen explains it before anything is read.</li>
-        <li><code>POST_NOTIFICATIONS</code> – to show a summary when apps change. Optional.</li>
+        <li><code>POST_NOTIFICATIONS</code> – only asked for when you turn notifications on in the app's settings. Off by default.</li>
         <li><code>RECEIVE_BOOT_COMPLETED</code> – to keep the hourly check scheduled after a restart.</li>
       </ul>
     </section>
@@ -165,7 +165,7 @@
     <h2>Why permission changes matter</h2>
     <p>Most app updates are harmless. But sometimes an update quietly asks for more – your location, your contacts or your microphone. UpdateMonitor shows that right in the history:</p>
     <p><span class="permission-example">New permissions: Access precise location only in the foreground, Read your contacts</span></p>
-    <p>You can filter the list to show only updates with permission changes, and you get a notification when it happens.</p>
+    <p>You can filter the list to show only updates with permission changes, and – if you turn notifications on – get told when it happens.</p>
   </section>
 
   <section class="card">
