@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>UpdateMonitor – Android App Update History | Nordic Appworks</title>
+  <meta name="description" content="UpdateMonitor records every app update, install and removal on your Android device, including permission changes. No internet permission, no ads, no tracking.">
+  <link rel="canonical" href="https://updatemonitor.app/">
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" href="favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+  <meta name="theme-color" content="#283593">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="UpdateMonitor – Android App Update History">
+  <meta property="og:description" content="Every app update, install and removal on your device – with permission changes. No internet, no ads, no tracking.">
+  <meta property="og:url" content="https://updatemonitor.app/">
+  <meta property="og:image" content="https://updatemonitor.app/img/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="stylesheet" href="style.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "UpdateMonitor",
+    "operatingSystem": "Android 8.0 or later",
+    "applicationCategory": "UtilitiesApplication",
+    "description": "Records every app update, install and removal on your Android device, including permission changes. Works fully offline.",
+    "url": "https://updatemonitor.app/",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" },
+    "publisher": { "@type": "Organization", "name": "Nordic Appworks" }
+  }
+  </script>
+</head>
+<body>
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none">
+  <symbol id="i-history" viewBox="0 0 24 24"><path d="M13,3c-4.97,0 -9,4.03 -9,9L1,12l3.89,3.89 0.07,0.14L9,12L6,12c0,-3.87 3.13,-7 7,-7s7,3.13 7,7 -3.13,7 -7,7c-1.93,0 -3.68,-0.79 -4.94,-2.06l-1.42,1.42C8.27,19.99 10.51,21 13,21c4.97,0 9,-4.03 9,-9s-4.03,-9 -9,-9zM12,8v5l4.28,2.54 0.72,-1.21 -3.5,-2.08L13.5,8L12,8z"/></symbol>
+  <symbol id="i-apps" viewBox="0 0 24 24"><path d="M4,8h4L8,4L4,4v4zM10,20h4v-4h-4v4zM4,20h4v-4L4,16v4zM4,14h4v-4L4,10v4zM10,14h4v-4h-4v4zM16,4v4h4L20,4h-4zM10,8h4L14,4h-4v4zM16,14h4v-4h-4v4zM16,20h4v-4h-4v4z"/></symbol>
+  <symbol id="i-lock" viewBox="0 0 24 24"><path d="M18,8h-1V6c0,-2.76 -2.24,-5 -5,-5S7,3.24 7,6v2H6c-1.1,0 -2,0.9 -2,2v10c0,1.1 0.9,2 2,2h12c1.1,0 2,-0.9 2,-2V10c0,-1.1 -0.9,-2 -2,-2zM12,17c-1.1,0 -2,-0.9 -2,-2s0.9,-2 2,-2 2,0.9 2,2 -0.9,2 -2,2zM15.1,8H8.9V6c0,-1.71 1.39,-3.1 3.1,-3.1 1.71,0 3.1,1.39 3.1,3.1v2z"/></symbol>
+  <symbol id="i-bell" viewBox="0 0 24 24"><path d="M12,22c1.1,0 2,-0.9 2,-2h-4c0,1.1 0.89,2 2,2zM18,16v-5c0,-3.07 -1.64,-5.64 -4.5,-6.32L13.5,4c0,-0.83 -0.67,-1.5 -1.5,-1.5s-1.5,0.67 -1.5,1.5v0.68C7.63,5.36 6,7.92 6,11v5l-2,2v1h16v-1l-2,-2z"/></symbol>
+  <symbol id="i-calendar" viewBox="0 0 24 24"><path d="M19,4h-1V2h-2v2H8V2H6v2H5C3.89,4 3.01,4.9 3.01,6L3,20c0,1.1 0.89,2 2,2h14c1.1,0 2,-0.9 2,-2V6C21,4.9 20.1,4 19,4zM19,20H5V10h14V20zM19,8H5V6h14V8zM9,14H7v-2h2V14zM13,14h-2v-2h2V14zM17,14h-2v-2h2V14zM9,18H7v-2h2V18zM13,18h-2v-2h2V18zM17,18h-2v-2h2V18z"/></symbol>
+  <symbol id="i-filter" viewBox="0 0 24 24"><path d="M3,17v2h6v-2L3,17zM3,5v2h10L13,5L3,5zM13,21v-2h8v-2h-8v-2h-2v6h2zM7,9v2L3,11v2h4v2h2L9,9L7,9zM21,13v-2L11,11v2h10zM15,9h2L17,7h4L21,5h-4L17,3h-2v6z"/></symbol>
+  <symbol id="i-export" viewBox="0 0 24 24"><path d="M19,9h-4V3H9v6H5l7,7 7,-7zM5,18v2h14v-2H5z"/></symbol>
+  <symbol id="i-widget" viewBox="0 0 24 24"><path d="M13,13v8h8v-8h-8zM3,21h8v-8H3v8zM3,3v8h8V3H3zM16.66,1.69L11,7.34 16.66,13l5.66,-5.66 -5.66,-5.65z"/></symbol>
+  <symbol id="i-block" viewBox="0 0 24 24"><path d="M12,2C6.48,2 2,6.48 2,12s4.48,10 10,10 10,-4.48 10,-10S17.52,2 12,2zM4,12c0,-4.42 3.58,-8 8,-8 1.85,0 3.55,0.63 4.9,1.69L5.69,16.9C4.63,15.55 4,13.85 4,12zM12,20c-1.85,0 -3.55,-0.63 -4.9,-1.69L18.31,7.1C19.37,8.45 20,10.15 20,12c0,4.42 -3.58,8 -8,8z"/></symbol>
+  <symbol id="i-play" viewBox="0 0 24 24"><path d="M8,5v14l11,-7z"/></symbol>
+</svg>
+
+<header>
+  <picture>
+    <source media="(max-width:600px)" srcset="img/header-banner-mobile.webp" type="image/webp" width="440" height="400">
+    <source srcset="img/header-banner.webp" type="image/webp" width="1600" height="400">
+    <img src="img/header-banner.png" width="1600" height="400" alt="UpdateMonitor for Android – your app update history, on your device only" fetchpriority="high">
+  </picture>
+</header>
+
+<main class="container">
+
+  <section class="card">
+    <span class="badge">Coming soon to Google Play</span>
+    <h1>UpdateMonitor – Android App Update History</h1>
+    <p class="tagline">Know exactly which apps changed on your phone, and when.</p>
+    <p>UpdateMonitor keeps a clear history of every app update, new install and removal on your Android device – with the old and new version, the date and time, and which permissions an app gained or lost. Everything stays on your device: the app has no internet permission at all.</p>
+  </section>
+
+  <section class="card">
+    <h2>What does UpdateMonitor do?</h2>
+    <div class="features">
+      <div class="feature">
+        <svg class="icon"><use href="#i-history"/></svg>
+        <h3>Update history</h3>
+        <p>Every update per app, from which version to which version, with the exact date and time.</p>
+      </div>
+      <div class="feature">
+        <svg class="icon"><use href="#i-apps"/></svg>
+        <h3>Installs &amp; removals</h3>
+        <p>New apps and removed apps are recorded too, each clearly marked.</p>
+      </div>
+      <div class="feature">
+        <svg class="icon"><use href="#i-lock"/></svg>
+        <h3>Permission changes</h3>
+        <p>See when an update adds access to your location, camera, microphone, contacts and more.</p>
+      </div>
+      <div class="feature">
+        <svg class="icon"><use href="#i-bell"/></svg>
+        <h3>Notifications</h3>
+        <p>One short summary when apps change, with new permissions shown first.</p>
+      </div>
+      <div class="feature">
+        <svg class="icon"><use href="#i-calendar"/></svg>
+        <h3>Activity calendar</h3>
+        <p>A monthly heatmap shows on which days your apps changed. Tap a day to see what happened.</p>
+      </div>
+      <div class="feature">
+        <svg class="icon"><use href="#i-filter"/></svg>
+        <h3>Search &amp; filter</h3>
+        <p>Search by app, version or date, and filter by period, type of change, source or permission changes.</p>
+      </div>
+      <div class="feature">
+        <svg class="icon"><use href="#i-export"/></svg>
+        <h3>Export</h3>
+        <p>Share your history as a CSV spreadsheet or a PDF report – handy when IT support asks what changed.</p>
+      </div>
+      <div class="feature">
+        <svg class="icon"><use href="#i-widget"/></svg>
+        <h3>Widget</h3>
+        <p>The latest three changes right on your home screen.</p>
+      </div>
+      <div class="feature">
+        <svg class="icon"><use href="#i-block"/></svg>
+        <h3>100% ad-free</h3>
+        <p>No ads, no tracking, no account and no analytics. Free to use.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>Screenshots</h2>
+    <div class="screens">
+      <figure>
+        <picture><source srcset="img/screen-history.webp" type="image/webp"><img src="img/screen-history.png" width="600" height="1200" loading="lazy" alt="UpdateMonitor history with updates, installs and removals"></picture>
+        <figcaption>Updates, installs and removals</figcaption>
+      </figure>
+      <figure>
+        <picture><source srcset="img/screen-permissions.webp" type="image/webp"><img src="img/screen-permissions.png" width="600" height="1200" loading="lazy" alt="Updates that added new permissions"></picture>
+        <figcaption>Permission changes per update</figcaption>
+      </figure>
+      <figure>
+        <picture><source srcset="img/screen-calendar.webp" type="image/webp"><img src="img/screen-calendar.png" width="600" height="1200" loading="lazy" alt="Activity calendar with a monthly heatmap"></picture>
+        <figcaption>Activity calendar</figcaption>
+      </figure>
+      <figure>
+        <picture><source srcset="img/screen-filter.webp" type="image/webp"><img src="img/screen-filter.png" width="600" height="1200" loading="lazy" alt="Filter by period, type of change and source"></picture>
+        <figcaption>Filters</figcaption>
+      </figure>
+    </div>
+    <div class="widget-shot">
+      <picture><source srcset="img/widget.webp" type="image/webp"><img src="img/widget.png" width="600" height="336" loading="lazy" alt="UpdateMonitor home screen widget with the latest changes"></picture>
+    </div>
+  </section>
+
+  <div class="two-col">
+    <section class="card">
+      <h2>Privacy you can check</h2>
+      <ul class="check-list">
+        <li><strong>No internet permission</strong> – the app cannot send your app list anywhere.</li>
+        <li>No ads, no analytics, no crash reporting, no third-party SDKs.</li>
+        <li>No account and no servers.</li>
+        <li>Your history is excluded from cloud backup and stays on this device.</li>
+        <li>Delete everything at any time by clearing the app's data or uninstalling it.</li>
+      </ul>
+      <p>Read the full <a href="privacy.html">privacy policy</a>.</p>
+    </section>
+    <section class="card">
+      <h2>Permissions</h2>
+      <ul class="perm-list">
+        <li><code>QUERY_ALL_PACKAGES</code> – to see all installed apps, their versions and requested permissions. This is the core of the app; the welcome screen explains it before anything is read.</li>
+        <li><code>POST_NOTIFICATIONS</code> – to show a summary when apps change. Optional.</li>
+        <li><code>RECEIVE_BOOT_COMPLETED</code> – to keep the hourly check scheduled after a restart.</li>
+      </ul>
+    </section>
+  </div>
+
+  <section class="card">
+    <h2>Why permission changes matter</h2>
+    <p>Most app updates are harmless. But sometimes an update quietly asks for more – your location, your contacts or your microphone. UpdateMonitor shows that right in the history:</p>
+    <p><span class="permission-example">New permissions: Access precise location only in the foreground, Read your contacts</span></p>
+    <p>You can filter the list to show only updates with permission changes, and you get a notification when it happens.</p>
+  </section>
+
+  <section class="card">
+    <h2>Useful for IT support</h2>
+    <p>"It worked yesterday – what changed?" With UpdateMonitor the answer is one tap away. Export the history as a PDF or CSV and share it with your helpdesk. Apps installed through Google Play, a company portal or another installer are shown with their source.</p>
+  </section>
+
+  <section class="card">
+    <h2>Supported languages</h2>
+    <p>English and Norwegian (bokmål).</p>
+  </section>
+
+  <section class="card play-card">
+    <svg class="icon"><use href="#i-play"/></svg>
+    <div class="play-text">
+      <span class="badge">Coming soon</span>
+      <h2>Available on Google Play</h2>
+      <p>UpdateMonitor is free and runs on Android 8.0 and later.</p>
+    </div>
+    <a class="play-btn" aria-disabled="true">Coming soon</a>
+  </section>
+
+  <section class="card" id="contact">
+    <h2>Contact us</h2>
+    <p>Have a question or need support? Send us a message and we will get back to you as soon as possible.</p>
+    <form class="contact-form" action="https://formspree.io/f/moevdloa" method="POST">
+      <input type="hidden" name="_subject" value="UpdateMonitor website">
+      <input type="hidden" name="app" value="UpdateMonitor">
+      <label for="email">Your email</label>
+      <input id="email" type="email" name="email" required autocomplete="email">
+      <label for="message">Your message</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+      <button type="submit">Send</button>
+      <p class="contact-status" role="status" aria-live="polite"></p>
+    </form>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div>© 2026 Nordic Appworks • UpdateMonitor</div>
+  <nav>
+    <a href="./">Home</a>
+    <a href="privacy.html">Privacy Policy</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</footer>
+
+<script>
+  // Send the contact form without leaving the page; falls back to a normal POST without JavaScript
+  document.querySelector(".contact-form").addEventListener("submit", async (event) => {
+    event.preventDefault();
+    const form = event.target;
+    const status = form.querySelector(".contact-status");
+    const button = form.querySelector("button");
+    button.disabled = true;
+    status.className = "contact-status";
+    status.textContent = "Sending…";
+    try {
+      const response = await fetch(form.action, {
+        method: "POST",
+        body: new FormData(form),
+        headers: { Accept: "application/json" }
+      });
+      if (!response.ok) throw new Error(response.status);
+      form.reset();
+      status.classList.add("ok");
+      status.textContent = "Thank you! Your message has been sent.";
+    } catch (e) {
+      status.classList.add("error");
+      status.textContent = "Sorry, the message could not be sent. Please try again later.";
+    } finally {
+      button.disabled = false;
+    }
+  });
+</script>
+</body>
+</html>

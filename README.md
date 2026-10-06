@@ -1,0 +1,42 @@
+# updatemonitor.app
+
+Website voor de Android-app UpdateMonitor (Nordic Appworks), gehost op GitHub Pages met eigen domein `updatemonitor.app`. Zelfde opzet als rebootmonitor.com.
+
+- `index.html` — homepagina (functies, screenshots, privacy, contactformulier via Formspree)
+- `privacy.html` — privacybeleid (de URL voor de Play Console: `https://updatemonitor.app/privacy.html`)
+- `404.html`, `robots.txt`, `sitemap.xml`, `CNAME`, `.nojekyll`
+- `img/` — banner, screenshots, iconen; gemaakt vanuit de app-repo (`Android-Apps/UpdateMonitor`)
+
+## Live zetten
+
+1. **Repo aanmaken** op GitHub, bijvoorbeeld `vanderlindenno/UpdateMonitor` (publiek, zonder README), en deze map pushen:
+
+   ```bash
+   git remote add origin https://github.com/vanderlindenno/UpdateMonitor.git
+   git push -u origin main
+   ```
+
+2. **GitHub Pages aanzetten**: Settings → Pages → *Deploy from a branch* → `main` / `/ (root)`.
+3. **Eigen domein**: Settings → Pages → Custom domain → `updatemonitor.app` (staat ook in `CNAME`).
+4. **DNS bij de registrar** (bijvoorbeeld Porkbun, zoals rebootmonitor.com):
+
+   | Type | Host | Waarde |
+   |------|------|--------|
+   | A | `@` | `185.199.108.153` |
+   | A | `@` | `185.199.109.153` |
+   | A | `@` | `185.199.110.153` |
+   | A | `@` | `185.199.111.153` |
+   | AAAA | `@` | `2606:50c0:8000::153` |
+   | AAAA | `@` | `2606:50c0:8001::153` |
+   | AAAA | `@` | `2606:50c0:8002::153` |
+   | AAAA | `@` | `2606:50c0:8003::153` |
+   | CNAME | `www` | `vanderlindenno.github.io` |
+
+   Verwijder eventuele standaard parkeerrecords van de registrar (ALIAS/URL-forward naar `@`).
+5. **HTTPS afdwingen**: zodra GitHub het certificaat heeft uitgegeven (kan tot een uur duren), *Enforce HTTPS* aanvinken. `.app`-domeinen werken alleen via HTTPS; de site is pas bereikbaar als het certificaat er is.
+6. **Domein verifiëren** (aanbevolen): GitHub → profiel-Settings → Pages → *Add a domain*, en het TXT-record toevoegen dat GitHub geeft. Dat voorkomt dat iemand anders het domein aan een eigen repo koppelt.
+
+## Na de lancering op Google Play
+
+In `index.html` het blok "Available on Google Play" aanpassen: de badges "Coming soon" weghalen en de knop een link geven naar
+`https://play.google.com/store/apps/details?id=app.updatemonitor.mobile`.
