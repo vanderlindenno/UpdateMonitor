@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>UpdateMonitor – Android App Update History | Nordic Appworks</title>
-  <meta name="description" content="UpdateMonitor records every app update, install and removal on your Android device, including permission changes. No internet permission, no ads, no tracking.">
+  <meta name="description" content="UpdateMonitor records every app update, install and removal on your Android device, shows which apps can use your camera, location and more, and flags apps from outside the Play Store. No internet permission, no ads, no tracking.">
   <link rel="canonical" href="https://updatemonitor.app/">
   <link rel="icon" href="favicon.ico" sizes="any">
   <link rel="icon" href="favicon.png" type="image/png">
@@ -24,7 +24,7 @@
     "name": "UpdateMonitor",
     "operatingSystem": "Android 8.0 or later",
     "applicationCategory": "UtilitiesApplication",
-    "description": "Records every app update, install and removal on your Android device, including permission changes. Works fully offline.",
+    "description": "Records every app update, install and removal on your Android device, shows which apps can use your camera, location and more, and flags apps installed outside the Play Store. Works fully offline.",
     "url": "https://updatemonitor.app/",
     "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" },
     "publisher": { "@type": "Organization", "name": "Nordic Appworks" }
@@ -44,6 +44,9 @@
   <symbol id="i-widget" viewBox="0 0 24 24"><path d="M13,13v8h8v-8h-8zM3,21h8v-8H3v8zM3,3v8h8V3H3zM16.66,1.69L11,7.34 16.66,13l5.66,-5.66 -5.66,-5.65z"/></symbol>
   <symbol id="i-block" viewBox="0 0 24 24"><path d="M12,2C6.48,2 2,6.48 2,12s4.48,10 10,10 10,-4.48 10,-10S17.52,2 12,2zM4,12c0,-4.42 3.58,-8 8,-8 1.85,0 3.55,0.63 4.9,1.69L5.69,16.9C4.63,15.55 4,13.85 4,12zM12,20c-1.85,0 -3.55,-0.63 -4.9,-1.69L18.31,7.1C19.37,8.45 20,10.15 20,12c0,4.42 -3.58,8 -8,8z"/></symbol>
   <symbol id="i-play" viewBox="0 0 24 24"><path d="M8,5v14l11,-7z"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12,1L3,5v6c0,5.55 3.84,10.74 9,12 5.16,-1.26 9,-6.45 9,-12L21,5l-9,-4zM12,11.99h7c-0.53,4.12 -3.28,7.79 -7,8.94L12,12L5,12L5,6.3l7,-3.11v8.8z"/></symbol>
+  <symbol id="i-warning" viewBox="0 0 24 24"><path d="M1,21h22L12,2 1,21zM13,18h-2v-2h2v2zM13,14h-2v-4h2v4z"/></symbol>
+  <symbol id="i-storage" viewBox="0 0 24 24"><path d="M2,20h20v-4L2,16v4zM4,17h2v2L4,19v-2zM2,4v4h20L22,4L2,4zM6,7L4,7L4,5h2v2zM2,14h20v-4L2,10v4zM4,11h2v2L4,13v-2z"/></symbol>
 </svg>
 
 <header>
@@ -60,7 +63,7 @@
     <span class="badge">Coming soon to Google Play</span>
     <h1>UpdateMonitor – Android App Update History</h1>
     <p class="tagline">Know exactly which apps changed on your phone, and when.</p>
-    <p>UpdateMonitor keeps a clear history of every app update, new install and removal on your Android device – with the old and new version, the date and time, and which permissions an app gained or lost. Everything stays on your device: the app has no internet permission at all.</p>
+    <p>UpdateMonitor keeps a clear history of every app update, new install and removal on your Android device – with the old and new version, the date and time, and which permissions an app gained or lost. It also shows which apps can use your camera, location, microphone and more, and flags apps that didn't come from the Play Store. Everything stays on your device: the app has no internet permission at all.</p>
   </section>
 
   <section class="card">
@@ -69,7 +72,7 @@
       <div class="feature">
         <svg class="icon"><use href="#i-history"/></svg>
         <h3>Update history</h3>
-        <p>Every update per app, from which version to which version, with the exact date and time.</p>
+        <p>One clear line per app, grouped by day: from which version to which, with the app's own icon and the time. Older updates fold out with one tap.</p>
       </div>
       <div class="feature">
         <svg class="icon"><use href="#i-apps"/></svg>
@@ -79,12 +82,27 @@
       <div class="feature">
         <svg class="icon"><use href="#i-lock"/></svg>
         <h3>Permission changes</h3>
-        <p>See when an update adds access to your location, camera, microphone, contacts and more.</p>
+        <p>A small shield shows when an update adds or removes access to your location, camera, microphone, contacts and more.</p>
+      </div>
+      <div class="feature">
+        <svg class="icon"><use href="#i-shield"/></svg>
+        <h3>Who can access what</h3>
+        <p>For each kind of access – camera, location, microphone and more – see which apps actually have it, and since when. Special access such as accessibility is listed separately.</p>
+      </div>
+      <div class="feature">
+        <svg class="icon"><use href="#i-warning"/></svg>
+        <h3>Outside the Play Store</h3>
+        <p>Apps installed from an APK file or another store are flagged with their source, with their own filter and optional notification.</p>
+      </div>
+      <div class="feature">
+        <svg class="icon"><use href="#i-storage"/></svg>
+        <h3>Storage at a glance</h3>
+        <p>Used and free space in one line, and how much it changed this week. Turns yellow when your phone is almost full. Can be hidden.</p>
       </div>
       <div class="feature">
         <svg class="icon"><use href="#i-bell"/></svg>
         <h3>Notifications</h3>
-        <p>Optional and off by default: a short summary of all changes, Play Store updates and/or Android system updates.</p>
+        <p>Optional and off by default: a short summary of all changes, or only Play Store updates, Android system updates and/or apps installed outside the Play Store.</p>
       </div>
       <div class="feature">
         <svg class="icon"><use href="#i-calendar"/></svg>
@@ -118,12 +136,12 @@
     <h2>Screenshots</h2>
     <div class="screens">
       <figure>
-        <picture><source srcset="img/screen-history.webp" type="image/webp"><img src="img/screen-history.png" width="600" height="1200" loading="lazy" alt="UpdateMonitor history with updates, installs and removals"></picture>
-        <figcaption>Updates, installs and removals</figcaption>
+        <picture><source srcset="img/screen-history.webp" type="image/webp"><img src="img/screen-history.png" width="600" height="1200" loading="lazy" alt="UpdateMonitor history: one line per app, grouped by day, with permission and source signals"></picture>
+        <figcaption>Every change, grouped by day</figcaption>
       </figure>
       <figure>
-        <picture><source srcset="img/screen-permissions.webp" type="image/webp"><img src="img/screen-permissions.png" width="600" height="1200" loading="lazy" alt="Updates that added new permissions"></picture>
-        <figcaption>Permission changes per update</figcaption>
+        <picture><source srcset="img/screen-permissions.webp" type="image/webp"><img src="img/screen-permissions.png" width="600" height="1200" loading="lazy" alt="Permissions tab: how many apps can use location, camera, microphone and more"></picture>
+        <figcaption>Who can access what</figcaption>
       </figure>
       <figure>
         <picture><source srcset="img/screen-calendar.webp" type="image/webp"><img src="img/screen-calendar.png" width="600" height="1200" loading="lazy" alt="Activity calendar with a monthly heatmap"></picture>
@@ -163,19 +181,18 @@
 
   <section class="card">
     <h2>Why permission changes matter</h2>
-    <p>Most app updates are harmless. But sometimes an update quietly asks for more – your location, your contacts or your microphone. UpdateMonitor shows that right in the history:</p>
-    <p><span class="permission-example">New permissions: Access precise location only in the foreground, Read your contacts</span></p>
-    <p>You can filter the list to show only updates with permission changes, and – if you turn notifications on – get told when it happens.</p>
+    <p>Most app updates are harmless. But sometimes an update quietly asks for more – your location, your contacts or your microphone. UpdateMonitor marks that right in the history with a small shield and the number of new permissions; open the app to see exactly which ones.</p>
+    <p>The <strong>Permissions</strong> tab turns it around: pick camera, location or microphone and see every app that has that access, with the newest ones marked. You can also filter the history to show only updates with permission changes, and – if you turn notifications on – get told when it happens.</p>
   </section>
 
   <section class="card">
     <h2>Useful for IT support</h2>
-    <p>"It worked yesterday – what changed?" With UpdateMonitor the answer is one tap away. Export the history as a PDF or CSV and share it with your helpdesk. Apps installed through Google Play, a company portal or another installer are shown with their source.</p>
+    <p>"It worked yesterday – what changed?" With UpdateMonitor the answer is one tap away. Export the history as a PDF or CSV and share it with your helpdesk. Apps installed through Google Play, a company portal or another installer are shown with their source, and anything from outside the Play Store stands out.</p>
   </section>
 
   <section class="card">
-    <h2>Supported languages</h2>
-    <p>English and Norwegian (bokmål).</p>
+    <h2>Languages and accessibility</h2>
+    <p>English and Norwegian (bokmål). Works with TalkBack and large text sizes.</p>
   </section>
 
   <section class="card play-card">
