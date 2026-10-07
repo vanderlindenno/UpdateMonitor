@@ -17,9 +17,7 @@ Website voor de Android-app UpdateMonitor (Nordic Appworks), gehost op GitHub Pa
    ```
 
 2. **GitHub Pages aanzetten**: Settings → Pages → *Deploy from a branch* → `main` / `/ (root)`.
-3. **Eigen domein** (pas zodra `updatemonitor.app` geregistreerd is): Settings → Pages → Custom domain → `updatemonitor.app`. GitHub maakt dan zelf het bestand `CNAME` aan. Zet het domein er niet eerder in: dan stuurt GitHub alle bezoekers door naar een adres dat nog niet bestaat.
-
-   Tot die tijd staat de site op **https://vanderlindenno.github.io/UpdateMonitor/**.
+3. **Eigen domein**: het bestand `CNAME` bevat `updatemonitor.app` (sinds 7 oktober 2026, toen de DNS bij Porkbun klaarstond). Settings → Pages → *Enforce HTTPS* aanzetten zodra GitHub het certificaat heeft; `.app` werkt alleen via HTTPS.
 4. **DNS bij de registrar** (bijvoorbeeld Porkbun, zoals rebootmonitor.com):
 
    | Type | Host | Waarde |
