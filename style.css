@@ -144,6 +144,8 @@ code { background: var(--accent-soft); padding: 1px 6px; border-radius: 6px; fon
 .video-block h2 { margin-top: 0; }
 .video-block .yt { margin: 0; flex: 0 0 auto; width: 230px; }
 
+.video-block.promo { border: 0; padding: 0; margin: 0; }
+
 /* Guides */
 .guide { max-width: 760px; margin-left: auto; margin-right: auto; }
 .guide h2 { margin-top: 30px; }
