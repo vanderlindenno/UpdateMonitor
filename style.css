@@ -121,6 +121,29 @@ code { background: var(--accent-soft); padding: 1px 6px; border-radius: 6px; fon
 .footer nav { margin-top: 4px; display: flex; flex-wrap: wrap; justify-content: center; }
 .footer nav a { display: inline-block; padding: 14px 12px; min-height: 48px; box-sizing: border-box; }
 
+/* Videos: thumbnail with a play button; the player loads only after a click */
+.yt { position: relative; width: 100%; max-width: 230px; aspect-ratio: 9 / 16; border-radius: 20px; overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, .25); background: #000; margin: 0 auto; }
+.yt picture { position: absolute; inset: 0; display: block; }
+.yt img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.yt > button { position: absolute; inset: 0; width: 100%; border: 0; background: transparent; cursor: pointer; padding: 0; }
+.yt .play { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width: 76px; height: 76px; border-radius: 50%;
+  background: rgba(255, 255, 255, .94); display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 16px rgba(0, 0, 0, .35); }
+.yt .play svg { width: 34px; height: 34px; fill: var(--primary-dark); margin-left: 5px; }
+.yt > button:hover .play { background: #fff; }
+.yt > button:focus-visible { outline: 4px solid #9fa8da; outline-offset: -4px; }
+.yt iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+.videos { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 28px; margin-top: 12px; }
+.video-item { text-align: center; max-width: 300px; margin: 0 auto; display: flex; flex-direction: column; align-items: center; }
+.video-item .play-btn { margin-top: auto; }
+.video-item h3 { margin: 16px 0 6px; }
+.video-item p { color: var(--muted); margin: 0 0 14px; }
+.video-block { display: flex; align-items: center; justify-content: center; gap: 32px; flex-wrap: wrap; margin: 30px 0 0;
+  padding: 24px; border-radius: 14px; border: 1px solid var(--border); }
+.video-block .video-text { flex: 1; min-width: 240px; max-width: 360px; }
+.video-block h2 { margin-top: 0; }
+.video-block .yt { margin: 0; flex: 0 0 auto; width: 230px; }
+
 /* Guides */
 .guide { max-width: 760px; margin-left: auto; margin-right: auto; }
 .guide h2 { margin-top: 30px; }

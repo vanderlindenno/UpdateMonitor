@@ -82,8 +82,24 @@
   }
 ]
   </script>
+  <script type="application/ld+json">
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "Which apps can use your camera, microphone or location?",
+    "description": "The Permissions tab: every kind of access, which apps really have it, and since when.",
+    "thumbnailUrl": "https://updatemonitor.app/img/video-2.jpg",
+    "uploadDate": "2026-10-08",
+    "duration": "PT50S",
+    "contentUrl": "https://youtube.com/shorts/-YNwwlB9cz0",
+    "embedUrl": "https://www.youtube-nocookie.com/embed/-YNwwlB9cz0"
+  }
+]
+  </script>
 </head>
 <body>
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none"><symbol id="i-play" viewBox="0 0 24 24"><path d="M8,5v14l11,-7z"/></symbol></svg>
 
 <main class="container">
   <article class="card guide">
@@ -128,6 +144,15 @@
 <h3>Can UpdateMonitor turn permissions off?</h3>
 <p>No, only Android can do that. UpdateMonitor shows the overview and takes you to the right Android settings screen with one tap.</p>
 
+    <section class="video-block">
+      <div class="video-text">
+        <h2>Watch: Which apps can use your camera, microphone or location?</h2>
+        <p>The Permissions tab: every kind of access, which apps really have it, and since when. About a minute, with captions.</p>
+        <a class="play-btn" href="https://youtube.com/shorts/-YNwwlB9cz0" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-play"/></svg> Watch on YouTube</a>
+      </div>
+      <div class="yt" data-id="-YNwwlB9cz0" data-title="Which apps can use your camera, microphone or location?"><button type="button" aria-label="Play the video: Which apps can use your camera, microphone or location?"><picture><source srcset="../img/video-2.webp" type="image/webp"><img src="../img/video-2.jpg" width="540" height="960" alt="Which apps can use your camera, microphone or location?" loading="lazy" decoding="async"></picture><span class="play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6 3.8v16.4a1 1 0 0 0 1.5.9l13-8.2a1 1 0 0 0 0-1.7l-13-8.2A1 1 0 0 0 6 3.8z"/></svg></span></button></div>
+    </section>
+
     <div class="cta">
       <h2>UpdateMonitor – free for Android</h2>
       <p>Your app update history, who can access what, and warnings for new permissions – all on your phone, with no internet permission, no ads and no tracking.</p>
@@ -155,5 +180,23 @@
     <a href="../no/" hreflang="nb" lang="nb">Norsk</a>
   </nav>
 </footer>
+<script>
+  // Load the YouTube player only after a click (youtube-nocookie); a local file: page opens YouTube instead
+  document.querySelectorAll(".yt").forEach(function (box) {
+    var button = box.querySelector("button");
+    if (!button) return;
+    button.addEventListener("click", function () {
+      var id = box.getAttribute("data-id");
+      if (location.protocol === "file:") { window.open("https://youtube.com/shorts/" + id, "_blank", "noopener"); return; }
+      var frame = document.createElement("iframe");
+      frame.src = "https://www.youtube-nocookie.com/embed/" + id + "?autoplay=1&rel=0&playsinline=1";
+      frame.title = box.getAttribute("data-title");
+      frame.allow = "accelerometer; autoplay; encrypted-media; picture-in-picture";
+      frame.allowFullscreen = true;
+      frame.referrerPolicy = "strict-origin-when-cross-origin";
+      box.replaceChildren(frame);
+    });
+  });
+</script>
 </body>
 </html>

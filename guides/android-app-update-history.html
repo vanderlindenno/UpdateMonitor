@@ -82,8 +82,24 @@
   }
 ]
   </script>
+  <script type="application/ld+json">
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "UpdateMonitor in 1 minute",
+    "description": "A quick tour: the history per day, older updates, the calendar, filters and export.",
+    "thumbnailUrl": "https://updatemonitor.app/img/video-1.jpg",
+    "uploadDate": "2026-10-08",
+    "duration": "PT1M12S",
+    "contentUrl": "https://youtube.com/shorts/0LE4vzGjj98",
+    "embedUrl": "https://www.youtube-nocookie.com/embed/0LE4vzGjj98"
+  }
+]
+  </script>
 </head>
 <body>
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none"><symbol id="i-play" viewBox="0 0 24 24"><path d="M8,5v14l11,-7z"/></symbol></svg>
 
 <main class="container">
   <article class="card guide">
@@ -119,6 +135,15 @@
 <h3>How do I stop apps from updating automatically?</h3>
 <p>In the Play Store, tap your profile picture → <strong>Settings → Network preferences → Auto-update apps</strong> and choose <strong>Don't auto-update apps</strong>. For a single app, open its Play Store page, tap the three dots and turn off <strong>Enable auto update</strong>.</p>
 
+    <section class="video-block">
+      <div class="video-text">
+        <h2>Watch: UpdateMonitor in 1 minute</h2>
+        <p>A quick tour: the history per day, older updates, the calendar, filters and export. About a minute, with captions.</p>
+        <a class="play-btn" href="https://youtube.com/shorts/0LE4vzGjj98" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-play"/></svg> Watch on YouTube</a>
+      </div>
+      <div class="yt" data-id="0LE4vzGjj98" data-title="UpdateMonitor in 1 minute"><button type="button" aria-label="Play the video: UpdateMonitor in 1 minute"><picture><source srcset="../img/video-1.webp" type="image/webp"><img src="../img/video-1.jpg" width="540" height="960" alt="UpdateMonitor in 1 minute" loading="lazy" decoding="async"></picture><span class="play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6 3.8v16.4a1 1 0 0 0 1.5.9l13-8.2a1 1 0 0 0 0-1.7l-13-8.2A1 1 0 0 0 6 3.8z"/></svg></span></button></div>
+    </section>
+
     <div class="cta">
       <h2>UpdateMonitor – free for Android</h2>
       <p>Your app update history, who can access what, and warnings for new permissions – all on your phone, with no internet permission, no ads and no tracking.</p>
@@ -146,5 +171,23 @@
     <a href="../no/" hreflang="nb" lang="nb">Norsk</a>
   </nav>
 </footer>
+<script>
+  // Load the YouTube player only after a click (youtube-nocookie); a local file: page opens YouTube instead
+  document.querySelectorAll(".yt").forEach(function (box) {
+    var button = box.querySelector("button");
+    if (!button) return;
+    button.addEventListener("click", function () {
+      var id = box.getAttribute("data-id");
+      if (location.protocol === "file:") { window.open("https://youtube.com/shorts/" + id, "_blank", "noopener"); return; }
+      var frame = document.createElement("iframe");
+      frame.src = "https://www.youtube-nocookie.com/embed/" + id + "?autoplay=1&rel=0&playsinline=1";
+      frame.title = box.getAttribute("data-title");
+      frame.allow = "accelerometer; autoplay; encrypted-media; picture-in-picture";
+      frame.allowFullscreen = true;
+      frame.referrerPolicy = "strict-origin-when-cross-origin";
+      box.replaceChildren(frame);
+    });
+  });
+</script>
 </body>
 </html>
