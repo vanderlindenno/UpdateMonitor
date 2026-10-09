@@ -1,0 +1,37 @@
+name: Submit changed pages to Bing
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '*.html'
+      - '**/*.html'
+  workflow_dispatch:
+    inputs:
+      all:
+        description: 'Submit every URL from sitemap.xml'
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
+
+jobs:
+  submit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      # Give GitHub Pages time to publish the new version first
+      - name: Wait for GitHub Pages
+        run: sleep 180
+
+      - name: Submit to Bing Webmaster Tools
+        env:
+          BING_API_KEY: ${{ secrets.BING_API_KEY }}
+          BEFORE: ${{ github.event.before }}
+          SHA: ${{ github.sha }}
+          SUBMIT_ALL: ${{ github.event.inputs.all }}
+        run: python .github/scripts/bing_submit.py
