@@ -83,6 +83,56 @@
   "embedUrl": "https://www.youtube-nocookie.com/embed/Ogi1GAPPjlM"
 }
   </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "@id": "https://updatemonitor.app/#faq",
+  "inLanguage": "en",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How can I see which apps were updated on my Android phone?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Open UpdateMonitor: it lists every update, install and removal grouped by day, with the old and new version and the time. The history is stored on your device, so you can look back at earlier updates."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How can I see which apps can use my camera, microphone or location?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The permissions overview shows, per permission, how many apps are allowed to use it and which apps they are. You can also review this in Android's own settings."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does UpdateMonitor collect my data?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. The app has no internet permission at all, so nothing can leave your phone. There is no account, no ads and no analytics."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I find apps installed outside the Play Store?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "UpdateMonitor flags apps that did not come from the Play Store, lets you filter on the source, and warns you when such an app is installed."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is UpdateMonitor free?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. UpdateMonitor is free to use, with no ads and no account."
+      }
+    }
+  ]
+}
+</script>
 </head>
 <body>
 
@@ -112,12 +162,12 @@
 
 <main class="container">
 
-  <section class="card">
+  <section class="card intro-grid"><div class="intro-text">
     <span class="badge">Coming soon to Google Play</span>
     <h1>UpdateMonitor – app update history and permission checker for Android</h1>
     <p class="tagline">Know exactly which apps changed on your phone, and when.</p>
     <p>UpdateMonitor keeps a clear history of every app update, new install and removal on your Android device – with the old and new version, the date and time, and which permissions an app gained or lost. It also shows which apps can use your camera, location, microphone and more, and flags apps that didn't come from the Play Store. Everything stays on your device: the app has no internet permission at all.</p>
-  </section>
+  </div><aside class="glance" aria-label="At a glance"><h3>At a glance</h3><ul><li>Free, no ads, no account</li><li>No internet permission</li><li>Everything stays on your device</li><li>Works completely offline</li></ul></aside></section>
 
   <section class="card" id="promo">
     <div class="video-block promo">
@@ -294,6 +344,10 @@
     <p>English and Norwegian (bokmål). Works with TalkBack and large text sizes.</p>
   </section>
 
+  <section class="card faq" id="faq"><h2>Frequently asked questions</h2><details><summary>How can I see which apps were updated on my Android phone?</summary><p>Open UpdateMonitor: it lists every update, install and removal grouped by day, with the old and new version and the time. The history is stored on your device, so you can look back at earlier updates.</p></details><details><summary>How can I see which apps can use my camera, microphone or location?</summary><p>The permissions overview shows, per permission, how many apps are allowed to use it and which apps they are. You can also review this in Android's own settings.</p></details><details><summary>Does UpdateMonitor collect my data?</summary><p>No. The app has no internet permission at all, so nothing can leave your phone. There is no account, no ads and no analytics.</p></details><details><summary>How do I find apps installed outside the Play Store?</summary><p>UpdateMonitor flags apps that did not come from the Play Store, lets you filter on the source, and warns you when such an app is installed.</p></details><details><summary>Is UpdateMonitor free?</summary><p>Yes. UpdateMonitor is free to use, with no ads and no account.</p></details></section>
+
+  <section class="card" id="more-apps"><h2>More apps from Nordic Appworks</h2><p><a href="https://rebootmonitor.com/"><strong>RebootMonitor</strong></a> — shows when your Android device was last restarted, with uptime, reboot history and an optional restart reminder. Like UpdateMonitor: free, offline and without ads.</p></section>
+
   <section class="card play-card">
     <svg class="icon"><use href="#i-play"/></svg>
     <div class="play-text">
@@ -335,6 +389,7 @@
     <a href="privacy.html">Privacy Policy</a>
     <a href="#support">Support</a>
     <a href="#contact">Contact</a>
+    <a href="https://rebootmonitor.com/">RebootMonitor</a>
     <a href="no/" hreflang="nb" lang="nb">Norsk</a>
   </nav>
 </footer>

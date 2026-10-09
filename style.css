@@ -171,3 +171,19 @@ code { background: var(--accent-soft); padding: 1px 6px; border-radius: 6px; fon
   .card { padding: 22px; }
   h1 { font-size: 25px; }
 }
+
+
+/* intro with at-a-glance panel, FAQ, four screenshots in one row */
+.intro-grid { display: grid; grid-template-columns: minmax(0, 1fr) 300px; gap: 40px; align-items: start; }
+.glance { background: var(--accent-soft); border-radius: 14px; padding: 20px 22px; }
+.glance h3 { margin: 0 0 12px; color: var(--primary-dark); font-size: 17px; }
+.glance ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
+.glance li { display: flex; gap: 10px; align-items: flex-start; font-size: 15px; }
+.glance li::before { content: "\2713"; flex: none; color: var(--primary); font-weight: 700; }
+.faq details { border-top: 1px solid var(--border); padding: 14px 0; }
+.faq details:last-of-type { border-bottom: 1px solid var(--border); }
+.faq summary { cursor: pointer; font-weight: 600; color: var(--primary-dark); }
+.faq p { margin: 10px 0 0; max-width: 70ch; }
+.screens { gap: 24px; }
+.screens figure { max-width: 216px; }
+@media (max-width: 900px) { .intro-grid { grid-template-columns: 1fr; } }
