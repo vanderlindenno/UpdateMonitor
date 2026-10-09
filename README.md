@@ -32,7 +32,3 @@ A plain static website hosted on GitHub Pages, without analytics or tracking. Af
 Found an error on the site? Please [open an issue](https://github.com/vanderlindenno/UpdateMonitor/issues).
 
 © 2026 Nordic Appworks. All rights reserved.
-
----
-
-Maintainer notes (Dutch): [ONDERHOUD.md](ONDERHOUD.md)
