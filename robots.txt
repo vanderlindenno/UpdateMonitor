@@ -1,5 +1,6 @@
 User-agent: *
 Allow: /
 Disallow: /README.md
+Disallow: /ONDERHOUD.md
 
 Sitemap: https://updatemonitor.app/sitemap.xml
