@@ -1,4 +1,4 @@
-# UpdateMonitor – website
+# Android app UpdateMonitor – website
 
 Source of **[updatemonitor.app](https://updatemonitor.app/)**, the website of **UpdateMonitor**, a privacy-first Android app that keeps a history of every app update, install and removal on your phone.
 
